@@ -6,7 +6,6 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="./assets/images/fev.png" />
     <title>বিসিসি - আঞ্চলিক কার্যালয়সমূহ</title>
-    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- daysi ui -->
@@ -67,7 +66,7 @@
       }
 
 
-      .border-gradient {
+.border-gradient {
   border: 2px solid transparent;
   border-radius: 9999px;
   background: 
@@ -80,6 +79,8 @@
 .text-gradient {
   padding: 5px;
   background: linear-gradient(to right, #16a34a, #4ade80);
+  background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -120,27 +121,27 @@
                 <details>
                   <summary class="hover:text-green-500">ব্রাঞ্চ সমূহ</summary>
                   <ul class="p-2 w-52 hover:open:">
-                    <li><a class="hover:text-green-500" href="">বিসিসি, প্রধান কার্যালয়</a></li>
-                    <li><a class="hover:text-green-500" href="">রাজশাহী</a></li>
-                    <li><a class="hover:text-green-500" href="">রংপুর</a></li>
-                    <li><a class="hover:text-green-500" href="">সিলেট</a></li>
-                    <li><a class="hover:text-green-500" href="">ফরিদপুর</a></li>
-                    <li><a class="hover:text-green-500" href="">বরিশাল</a></li>
-                    <li><a class="hover:text-green-500" href="">খুলনা</a></li>
-                    <li><a class="hover:text-green-500" href="">চট্টগ্রাম</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">বিসিসি, প্রধান কার্যালয়</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">রাজশাহী</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">রংপুর</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">সিলেট</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">ফরিদপুর</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">বরিশাল</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">খুলনা</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">চট্টগ্রাম</a></li>
                   </ul>
                 </details>
               </li>
-              <li><a class="hover:text-green-500" href="">যোগাযোগ</a></li>
-              <li><a class="hover:text-green-500" href="">আমাদের সম্পর্কে</a></li>
+              <li><a class="hover:text-green-500" href="./pages/contact.html">যোগাযোগ</a></li>
+              <li><a class="hover:text-green-500" href="./pages/about.html">আমাদের সম্পর্কে</a></li>
             </ul>
           </div>
         </div>
 
         <div class="navbar-end gap-2">
           <div class="hidden md:flex gap-2">
-            <a class="btn rounded-full border-black hover:bg-black hover:text-white" href=""><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
-            <a class="btn rounded-full border-black bg-black text-white hover:bg-white hover:text-black" href=""><i class="fa-solid fa-user"></i> রেজিস্টার</a>
+            <a class="btn rounded-full border-black hover:bg-black hover:text-white" href="./pages/login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
+            <a class="btn rounded-full border-black bg-black text-white hover:bg-white hover:text-black" href="./pages/register.html"><i class="fa-solid fa-user"></i> রেজিস্টার</a>
           </div>
 
           <div class="dropdown dropdown-end">
@@ -165,28 +166,28 @@
               tabindex="10"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-62 p-2 shadow"
             >
-              <li><a class="hover:text-green-500" href="">হোম</a></li>
+              <li><a class="hover:text-green-500" href="#">হোম</a></li>
               <li>
                 <details>
                   <summary class="hover:text-green-500">ব্রাঞ্চ সমূহ</summary>
                   <ul class="p-2">
-                    <li><a class="hover:text-green-500" href="">Submenu 1</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 2</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 1</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 2</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 1</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 2</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 1</a></li>
-                    <li><a class="hover:text-green-500" href="">Submenu 2</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">বিসিসি, প্রধান কার্যালয়</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">রাজশাহী</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">রংপুর</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">সিলেট</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">ফরিদপুর</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">বরিশাল</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">খুলনা</a></li>
+                    <li><a class="hover:text-green-500" href="./pages/singleBranch.html">চট্টগ্রাম</a></li>
                   </ul>
                 </details>
               </li>
-              <li><a class="hover:text-green-500" href="#">যোগাযোগ</a></li>
-              <li><a class="hover:text-green-500" href="#">আমাদের সম্পর্কে</a></li>
+              <li><a class="hover:text-green-500" href="./pages/contact.html">যোগাযোগ</a></li>
+              <li><a class="hover:text-green-500" href="./pages/about.html">আমাদের সম্পর্কে</a></li>
               
                 <div class="flex gap-2 md:hidden mt-2">
-                  <a class="btn rounded-full  border-black hover:bg-black hover:text-white " href=""><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
-                  <a class="btn rounded-full  border-black bg-black text-white hover:bg-white hover:text-black" href=""><i class="fa-solid fa-user"></i> রেজিস্টার</a>
+                  <a class="btn rounded-full  border-black hover:bg-black hover:text-white " href="./pages/login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
+                  <a class="btn rounded-full  border-black bg-black text-white hover:bg-white hover:text-black" href="./pages/register.html"><i class="fa-solid fa-user"></i> রেজিস্টার</a>
                 </div>
               
             </ul>
@@ -219,7 +220,7 @@
       </p>
 
       <div class="mt-6 flex flex-wrap md:flex-nowrap justify-center gap-4">
-        <a href="#course" class="px-6 py-3 bg-indigo-500 text-white rounded-full shadow-lg hover:bg-indigo-600 transition">
+        <a href="#branches" class="px-6 py-3 bg-indigo-500 text-white rounded-full shadow-lg hover:bg-indigo-600 transition">
           <i class="fa-solid fa-play"></i> কোর্স দেখুন
         </a>
         <a href="#info" class="px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/30 hover:bg-white/20 transition">
@@ -235,7 +236,7 @@
 
     <!-- main content -->
 
-    <section id="course" class="py-20 mx-auto">
+    <section id="branches" class="py-20 mx-auto">
     <div class="container mx-auto px-6">
         <div class="text-center items-center mb-8">
         <div class="flex justify-center my-4 text-center ">
@@ -258,7 +259,7 @@
 
 
           <!-- CARD -->
-           <a href="">
+           <a href="./pages/singleBranch.html">
             <div class="group relative bg-orange-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow duration-500 group-hover:shadow-xl mx-auto mt-4 mb-4">
@@ -278,7 +279,7 @@
            </a>
 
             <!-- Rajshahi -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-pink-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow duration-500 group-hover:shadow-xl mx-auto mt-4 mb-4">
@@ -298,7 +299,7 @@
             </a>
           
             <!-- Rangpur -->
-           <a href="">
+           <a href="./pages/singleBranch.html">
             <div class="group relative bg-blue-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow duration-500 group-hover:shadow-xl mx-auto mt-4 mb-4">
@@ -318,7 +319,7 @@
            </a>
 
             <!-- Sylhet -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-green-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow duration-500 group-hover:shadow-xl mx-auto mt-4 mb-4">
@@ -339,7 +340,7 @@
 
 
             <!-- Faridpur -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-yellow-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
 
@@ -365,7 +366,7 @@
             </a>
 
             <!-- Barishal -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-purple-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
 
@@ -389,7 +390,7 @@
             </a>
 
             <!-- Khulna -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-yellow-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
 
@@ -413,7 +414,7 @@
             </a>
 
             <!-- Chattogram -->
-            <a href="">
+            <a href="./pages/singleBranch.html">
               <div class="group relative bg-red-200 rounded-2xl p-8 shadow-md hover:shadow-xl 
                         transition duration-300 hover:-translate-y-2 text-center">
 

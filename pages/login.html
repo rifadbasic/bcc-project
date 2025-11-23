@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/fev.png" />
+    <title>BCCTMS - Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- daysi ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwind    -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-sans bg-gray-100">
+    <section>
+      <div
+        class="flex items-center justify-center min-h-screen py-10"
+      >
+        <div
+          class="bg-white border-b-green-600 border-t-green-600 border-t-4 border-b-4  rounded-lg shadow-md w-full max-w-md p-8"
+        >
+          <!-- Logos -->
+          <div class="flex justify-center gap-4 mb-4">
+            <img
+              src="../assets/images/logo.png"
+              class="h-10 w-[200px] mr-2 inline-block"
+            />
+          </div>
+
+          <h2 class="text-center text-2xl font-semibold text-gray-800 mb-6">
+            User Login
+          </h2>
+
+          <!-- Email -->
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Email</label
+          >
+          <input
+            type="email"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 bg-blue-50 focus:ring-2 focus:ring-green-500 focus:outline-none mb-4"
+            placeholder="Enter your email"
+          />
+
+          <!-- Password -->
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="w-full border border-gray-300 rounded-md px-3 py-2 bg-blue-50 focus:ring-2 focus:ring-green-500 focus:outline-none mb-4"
+            placeholder="Enter your password"
+          />
+
+          <!-- Bottom Links + Login Button -->
+          <div
+            class="flex justify-between items-center mb-4 text-sm text-gray-600"
+          >
+            <a href="register.html" class="hover:text-green-600">Not registered yet?</a>
+            <a href="forgot.html" class="hover:text-green-600">Forgot your password?</a>
+          </div>
+
+          <!-- Login Button -->
+          <button
+            class="w-full bg-gray-800 text-white py-2 rounded-full hover:bg-gray-900 transition duration-300"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
