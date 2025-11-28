@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/fev.png" />
+    <title>বিসিসি - সিঙ্গেল কোর্স</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- daysi ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwind    -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom css -->
+    <style>
+      body {
+        font-family: "Tiro Bangla", serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .tiro-bangla-regular {
+        font-family: "Tiro Bangla", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .tiro-bangla-regular-italic {
+        font-family: "Tiro Bangla", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .active {
+        color: #06af00;
+      }
+
+      .fade-bg {
+        transition: background-image 1s ease-in-out;
+      }
+
+
+.border-gradient {
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background: 
+    linear-gradient(white, white),
+    linear-gradient(to right, #16a34a, #4ade80);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.text-gradient {
+  padding: 5px;
+  background: linear-gradient(to right, #16a34a, #4ade80);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+      /* bottom-to-top fade animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    .active-btn {
+      background: #16a34a; /* green-600 */
+      color: white;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    </style>
+  </head>
+  <body class="mx-auto tiro-bangla-regular bg-gradient-to-l from-green-200 via-green-150 to-green-100 min-h-screen">
+    <!-- navbar -->
+    <section class="navbar bg-green-50 sticky top-0 z-50">
+      <div class="navbar w-[90%] mx-auto">
+        <div class="navbar-start">
+          <div class="text-xl">
+            <img
+              src="../assets/images/logo.png"
+              alt="BCC Logo"
+              class="h-8 w-full mr-2 inline"
+            />
+          </div>
+          <div class="hidden lg:flex ">
+            <ul class="menu menu-horizontal px-1 gap-2">
+              <li><a class="hover:text-green-500" href="../index.html">হোম</a></li>
+              <li>
+                <details>
+                  <summary class="hover:text-green-500">ব্রাঞ্চ সমূহ</summary>
+                  <ul class="p-2 w-52 hover:open:">
+                    <li><a class="hover:text-green-500" href="singleBranch.html">বিসিসি, প্রধান কার্যালয়</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">রাজশাহী</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">রংপুর</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">সিলেট</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">ফরিদপুর</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">বরিশাল</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">খুলনা</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">চট্টগ্রাম</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a class="hover:text-green-500" href="contact.html">যোগাযোগ</a></li>
+              <li><a class="hover:text-green-500" href="#">আমাদের সম্পর্কে</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navbar-end gap-2">
+          <div class="hidden md:flex gap-2">
+            <a class="btn rounded-full border-black hover:bg-black hover:text-white" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
+            <a class="btn rounded-full border-black bg-black text-white hover:bg-white hover:text-black" href="register.html"><i class="fa-solid fa-user"></i> রেজিস্টার</a>
+          </div>
+
+          <div class="dropdown dropdown-end">
+            <div tabindex="10" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+
+            <ul
+              tabindex="10"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-62 p-2 shadow"
+            >
+              <li><a class="hover:text-green-500" href="../index.html">হোম</a></li>
+              <li>
+                <details>
+                  <summary class="hover:text-green-500">ব্রাঞ্চ সমূহ</summary>
+                  <ul class="p-2">
+                    <li><a class="hover:text-green-500" href="singleBranch.html">বিসিসি, প্রধান কার্যালয়</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">রাজশাহী</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">রংপুর</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">সিলেট</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">ফরিদপুর</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">বরিশাল</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">খুলনা</a></li>
+                    <li><a class="hover:text-green-500" href="singleBranch.html">চট্টগ্রাম</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a class="hover:text-green-500" href="contact.html">যোগাযোগ</a></li>
+              <li><a class="hover:text-green-500" href="#">আমাদের সম্পর্কে</a></li>
+              
+                <div class="flex gap-2 md:hidden mt-2">
+                  <a class="btn rounded-full  border-black hover:bg-black hover:text-white " href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> লগইন</a>
+                  <a class="btn rounded-full  border-black bg-black text-white hover:bg-white hover:text-black" href="register.html"><i class="fa-solid fa-user"></i> রেজিস্টার</a>
+                </div>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- main content -->
+     <main class="w-8/10 mx-auto">
+
+      <div class="grid grid-flow-row md:grid-cols-7 gap-12 mt-10 mb-10">
+            <div class=" md:col-span-4 ">
+                <div class="mb-4">
+                    <div class="bg-white pb-4">
+                        <div class="bg-green-50 border-b-green-500 border-b-2 mb-6">
+                            <h1 class="text-2xl font-bold text-left p-4  text-black">C Programming for Young Learners.</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 mb-4">
+                  <p>
+                    সি প্রোগ্রামিং বাচ্চাদের জন্য কোডিং শেখার একটি সহজ ও মজার উপায়। এটি তাদের লজিক্যাল চিন্তা ভাবনা এবং সমস্যা সমাধানের ক্ষমতা বাড়ায়। 
+                    সি দিয়ে বাচ্চারা ছোট ছোট প্রোগ্রাম যেমন গেম বা ক্যালকুলেটর তৈরি করতে পারে, যা শেখাকে আনন্দদায়ক করে তোলে। 
+                    এই ভাষাটি শেখা ভবিষ্যতে অন্যান্য জটিল প্রোগ্রামিং ভাষা বুঝতে সাহায্য করে। নিয়মিত অনুশীলনের মাধ্যমে বাচ্চারা সৃজনশীলতা ও মনোযোগ বৃদ্ধি করতে পারে।
+                  </p>
+                </div>
+
+                <div class="flex justify-normal bg-white border-yellow-400 border-l-2 p-4 mb-4 gap-4 md:gap-8">
+                  <div class="bg-yellow-400 px-4 py-2 text-center">
+                    <h3 class="font-bold text-lg mb-1">ব্যাচ</h3>
+                    <p class="text-2xl">CPYL-01</p>
+                  </div>
+                  <div class="px-4 py-2 border-l-1 border-l-black">
+                    <h3 class="font-bold text-lg mb-1"><i class="fa-solid fa-calendar-days"></i> ব্যাচ শুরু হবে</h3>
+                    <p class="text-md">অক্টোবর ২০, ২০২৫</p>
+                  </div>
+                  <div class="px-4 py-2 border-l-1 border-l-black">
+                    <h3 class="font-bold text-lg mb-1"><i class="fa-solid fa-clock"></i> ক্লাশ সিডিউল</h3>
+                    <p class="text-md">রবিবার-মঙ্গলবার-বৃহস্পতিবার</p>
+                  </div>
+                </div>
+
+                <div class="sticky top-20 mb-4" id="courseNav">
+                <div class="bg-white p-4 flex flex-auto justify-start gap-4">
+
+                  <a href="#section1">
+                    <button class="myBtn w-full bg-black text-white p-2 rounded-full 
+                                  hover:bg-green-600 hover:scale-105 transition-all">
+                      ক্লাস প্লান
+                    </button>
+                  </a>
+
+                  <a href="#section2">
+                    <button class="myBtn w-full bg-black text-white p-2 rounded-full 
+                                  hover:bg-green-600 hover:scale-105 transition-all">
+                      ইনস্ট্রাক্টর
+                    </button>
+                  </a>
+
+                  <a href="#section3">
+                    <button class="myBtn w-full bg-black text-white p-2 rounded-full 
+                                  hover:bg-green-600 hover:scale-105 transition-all">
+                      সাধারণ জিজ্ঞাসা
+                    </button>
+                  </a>
+
+                </div>
+              </div>
+
+                <section id="section1" class="bg-white mt-10">
+                  <div class="bg-white pb-4">
+                    <div class="b bg-green-50 p-4 mt-6">
+                    <div class="flex items-center gap-6 text-black font-semibold">
+                      <p>মডিউল: <span class="font-normal">0</span></p>
+                      <p>ক্লাস: <span class="font-normal">0</span></p>
+                      <p>পরীক্ষা: <span class="font-normal">0</span></p>
+                      <p>প্রোজেক্ট: <span class="font-normal">0</span></p>
+                    </div>
+                  </div>
+                  </div>
+
+                </section>
+
+                <!-- Instructor Section -->
+              <section id="section2" class="bg-white mt-10">
+                <div class="bg-green-50 p-4">
+                  <h2 class="text-2xl font-bold text-black">ইনস্ট্রাক্টর</h2>
+                </div>
+
+                <!-- Instructor 1 -->
+                <div class="flex items-center gap-4 p-4 border-b border-green-300">
+                  <img src="https://i.ibb.co/v30hGwN/user.png" 
+                      class="w-20 h-20 rounded-full border" alt="">
+                  <div class="border-l-1 border-l-green-500 px-4">
+                    <h3 class="text-xl font-semibold">Md. Nasir Uddin</h3>
+                    <p>Assistant Maintenance Engineer</p>
+                    <p>BCC, Regional Office, Khulna</p>
+                  </div>
+                </div>
+
+                <!-- Instructor 2 -->
+                <div class="flex items-center gap-4 p-4">
+                  <img src="https://i.ibb.co/v30hGwN/user.png" 
+                      class="w-20 h-20 rounded-full border" alt="">
+                  <div class="border-l-1 border-l-green-500 px-4">
+                    <h3 class="text-xl font-semibold">Shohel Rana</h3>
+                    <p>Master Trainer</p>
+                    <p>BCC, Regional Office, Khulna</p>
+                  </div>
+                </div>
+              </section>
+
+
+                <!-- FAQ Section -->
+                <section id="section3" class="bg-white p-6 mt-10">
+                  <h2 class="text-2xl font-bold mb-6 text-green-700">সাধারণ জিজ্ঞাসা</h2>
+
+                  <div class="space-y-6 leading-relaxed">
+
+                    <div>
+                      <p class="font-semibold">প্রশ্নঃ এই কোর্সটি করার জন্য বাসায় কম্পিউটার থাকা জরুরি ?</p>
+                      <p>উত্তরঃ হ্যা! আপনি এই কোর্সটি করতে চাইলে আপনার বাসায় কম্পিউটার থাকা জরুরি ।</p>
+                    </div>
+
+                    <div>
+                      <p class="font-semibold">প্রশ্নঃ ক্লাসের পূর্বে বা পরবর্তি সময়ে কম্পিউটার ল্যাব ব্যবহার করা যাবে ?</p>
+                      <p>উত্তরঃ ক্লাস লেবেলেই মডিউলসমূহ করা হবে এবং প্রয়োজনে পড়তে হবে, তবে ক্লাস শেষে অফিস চলাকালীন সময়ের মধ্যে প্রয়োজনে lab ব্যবহার করতে পারবেন।</p>
+                    </div>
+
+                    <div>
+                      <p class="font-semibold">প্রশ্নঃ এটি কি ছাড়া অন্য কোন fee রয়েছে কি ?</p>
+                      <p>উত্তরঃ না ! কোন hidden fee নেই।</p>
+                    </div>
+
+                    <div>
+                      <p class="font-semibold">প্রশ্নঃ কোর্স ম্যাটিরিয়ালস কি ফ্রি দেওয়া হবে ?</p>
+                      <p>উত্তরঃ প্রযোজ্য কোর্স ম্যাটিরিয়ালস বিটিসি থেকে কোর্সের সাথেই free দেওয়া হবে।</p>
+                    </div>
+
+                  </div>
+                </section>
+
+            </div>
+            
+            <div class="md:col-span-3 stacky top-20">
+                <div class=" p-6 bg-white w-full max-w-xl mx-auto">
+
+                  <!-- Header Row -->
+                  <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-xl font-bold">কোর্স ফী</h2>
+                    <p class="text-lg font-semibold">৳ ৬৫০০</p>
+                  </div>
+
+                  <!-- Divider -->
+                  <hr class="border-gray-300 mb-4">
+
+                  <!-- Admission Rules -->
+                  <h3 class="text-xl font-bold mb-3">ভর্তির নিয়মাবলী</h3>
+
+                  <ul class="space-y-3 text-gray-700 leading-relaxed">
+                    <li class="flex gap-2">
+                      <span class="text-green-600 font-bold text-lg">»</span>
+                      <p>
+                        ভর্তির সময় নির্ধারিত ফি’সহ সর্বশেষ শিক্ষাগত যোগ্যতার 
+                        সনদপত্র/ফলাফলশীট/ আইডি কার্ড অনুলিপি,
+                      </p>
+                    </li>
+
+                    <li class="flex gap-2">
+                      <span class="text-green-600 font-bold text-lg">»</span>
+                      <p>
+                        জন্ম নিবন্ধন/জাতীয় পরিচয় পত্রের কপি, সদ্য তোলা ১ কপি 
+                        পাসপোর্ট সাইজের ছবি আনতে হবে।
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <!-- Divider -->
+                  <hr class="border-gray-300 my-4">
+
+                  <!-- Button -->
+                  <div class="mt-6 text-center">
+                    <a href="enroll.html">
+                      <button class="w-full bg-black text-white py-3 rounded-full font-semibold 
+                                  hover:bg-white hover:text-black hover:border-1 transition-all duration-600">
+                      আবেদন করি
+                    </button>
+                    </a>
+                  </div>
+
+                </div>
+
+            </div>
+        </div>
+     </main>
+  
+
+    <!-- footer -->
+    <section class="footer mt-10">
+      <footer class="bg-gray-800 text-gray-300 pt-14 pb-6 w-full">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+
+    <!-- Column 1 -->
+    <div>
+      <h2 class="text-xl font-bold border-b-1 border-white text-white mb-4">বাংলাদেশ কম্পিউটার কাউন্সিল</h2>
+      <p class="leading-5 text-sm">
+        জাতীয় সংসদের ১৯৯০ সালের ৯নং আইন বলে জাতীয় কম্পিউটার বোর্ড-কে রূপান্তরিত করে ‘‘বাংলাদেশ কম্পিউটার কাউন্সিল” নামে একটি সংবিধিবদ্ধ সংস্থা হিসেবে প্রতিষ্ঠা করা হয় যা রাষ্ট্রপতির সচিবালয়ের অধীন পরিচালিত হতে থাকে। ১৯৯১ সালে বাংলাদেশ কম্পিউটার কাউন্সিলকে তৎকালীন বিজ্ঞান ও প্রযুক্তি মন্ত্রণালয় (পরবর্তীকালে বিজ্ঞান এবং তথ্য ও যোগাযোগ প্রযুক্তি মন্ত্রণালয়)-এর অধীন ন্যস্ত করা হয়। বিগত ডিসেম্বর ২০১১ হতে বিসিসি নবসৃষ্ট তথ্য ও যোগাযোগ প্রযুক্তি বিভাগের প্রশাসনিক নিয়ন্ত্রণে পরিচালিত।
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4 border-b-1 border-white">যোগাযোগ করুন</h2>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fa-solid fa-phone"></i> 02-55006848</li>
+        <li><i class="fa-solid fa-envelope"></i> bccinfo@bcc.gov.bd</li>
+        <li><i class="fa-solid fa-location-dot"></i> ই-১৪/এক্স, আইসিটি টাওয়ার, আগারগাঁও, ঢাকা-১২০৭</li>
+        <li class="mt-3">
+          <a href="https://www.facebook.com/bcc.ict/" class="w-8 h-8 flex items-center justify-center text-green-500 rounded-full bg-white hover:bg-green-500 hover:text-white transition">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4 border-b-1 border-white">নীতিমালা</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a class="flex" href="termsCondition.html">
+          <i class="fa-solid fa-angle-right "></i> <span class="transition-all duration-300 ease-out hover:scale-110 hover:opacity-90">টার্মস এন্ড কন্ডিশন</span>
+        </a></li>
+        <li><a class="flex" href="privacy.html">
+          <i class="fa-solid fa-angle-right"></i> <span class="transition-all duration-300 ease-out hover:scale-110 hover:opacity-90">প্রাইভেসি পলিসি</span>
+        </a></li>
+        <li><a class="flex" href="#">
+          <i class="fa-solid fa-angle-right"></i> <span class="transition-all duration-300 ease-out hover:scale-110 hover:opacity-90">রিফান্ড পলিসি</span>
+        </a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-600 mt-10 pt-4 w-full">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between text-sm">
+      <p>All Rights Reserved By <span class="font-bold">Bangladesh Computer Council</span></p>
+      <a href="https://my-portfolio-app-sepia.vercel.app/">Developed by : <span class="text-green-400 font-semibold">rifadbasic</span></a>
+    </div>
+  </div>
+  
+ 
+    </section>
+
+ <button id="backToTopBtn"
+  class="fixed bottom-6 right-6 opacity-0 pointer-events-none bg-green-300 text-white text-center py-2 px-[0.6rem] border-green-400 rounded-full transition-opacity duration-700">
+  <i class="fa-solid fa-angle-up"></i>
+</button>
+
+
+
+    <!-- custom js -->
+    <script src="../script.js"></script>
+  </body>
+</html>

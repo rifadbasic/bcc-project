@@ -1,3 +1,4 @@
+// const buttons = document.querySelectorAll(".myBtn");
 const hero = document.getElementById("hero");
 
 const images = [
@@ -33,5 +34,28 @@ setInterval(changeBackground, 4000);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  });
+
+
+//  button
+
+const buttons = document.querySelectorAll('.myBtn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // remove active from all
+      buttons.forEach(b => b.classList.remove('active-btn'));
+
+      // add active to clicked
+      btn.classList.add('active-btn');
+
+      // smooth scroll manually (anchor works too, this helps smoother)
+      const sectionID = btn.parentElement.getAttribute("href");
+      const target = document.querySelector(sectionID);
+      target.scrollIntoView({ behavior: "smooth" });
+      
+      // prevent the default anchor jump
+      e.preventDefault();
     });
   });
