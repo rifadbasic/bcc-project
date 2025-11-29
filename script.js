@@ -10,6 +10,8 @@ const images = [
 let index = 0;
 
 function changeBackground() {
+  if (!hero || !images.length) return;  // prevent errors
+
   hero.style.backgroundImage = `url('${images[index]}')`;
   index = (index + 1) % images.length;
 }
@@ -44,18 +46,114 @@ const buttons = document.querySelectorAll('.myBtn');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      // remove active from all
       buttons.forEach(b => b.classList.remove('active-btn'));
 
-      // add active to clicked
       btn.classList.add('active-btn');
 
-      // smooth scroll manually (anchor works too, this helps smoother)
       const sectionID = btn.parentElement.getAttribute("href");
       const target = document.querySelector(sectionID);
       target.scrollIntoView({ behavior: "smooth" });
-      
-      // prevent the default anchor jump
       e.preventDefault();
     });
   });
+
+
+let BD = {};
+
+fetch("public/division.json")
+  .then(res => res.json())
+  .then(data => {
+    BD = data;
+    console.log(BD);
+    initAddressData();
+  })
+  .catch(err => console.error("JSON Load Error:", err));
+
+function initAddressData() {
+  // Present
+  const division = document.getElementById("division");
+  const district = document.getElementById("district");
+  const upazila = document.getElementById("upazila");
+
+  // Permanent
+  const permDiv = document.getElementById("perm-division");
+  const permDis = document.getElementById("perm-district");
+  const permUpa = document.getElementById("perm-thana");
+
+  // Load Division Dropdowns
+  Object.keys(BD).forEach(div => {
+    division.innerHTML += `<option value="${div}">${div}</option>`;
+    permDiv.innerHTML += `<option value="${div}">${div}</option>`;
+  });
+
+  // Present Division → District
+  division.addEventListener("change", () => {
+    const div = division.value;
+    district.innerHTML = "";
+    upazila.innerHTML = "";
+
+    Object.keys(BD[div]).forEach(dis => {
+      district.innerHTML += `<option value="${dis}">${dis}</option>`;
+    });
+  });
+
+  // Present District → Upazila
+  district.addEventListener("change", () => {
+    const div = division.value;
+    const dis = district.value;
+
+    upazila.innerHTML = "";
+    BD[div][dis].forEach(u => {
+      upazila.innerHTML += `<option value="${u}">${u}</option>`;
+    });
+  });
+
+  // Permanent Division
+  permDiv.addEventListener("change", () => {
+    const div = permDiv.value;
+    permDis.innerHTML = "";
+    permUpa.innerHTML = "";
+
+    Object.keys(BD[div]).forEach(dis => {
+      permDis.innerHTML += `<option value="${dis}">${dis}</option>`;
+    });
+  });
+
+  // Permanent District
+  permDis.addEventListener("change", () => {
+    const div = permDiv.value;
+    const dis = permDis.value;
+
+    permUpa.innerHTML = "";
+    BD[div][dis].forEach(u => {
+      permUpa.innerHTML += `<option value="${u}">${u}</option>`;
+    });
+  });
+
+  // Same Address Checkbox
+  document.getElementById("same-address").addEventListener("change", () => {
+    if (!document.getElementById("same-address").checked) return;
+
+    permDiv.value = division.value;
+    permDiv.dispatchEvent(new Event("change"));
+
+    setTimeout(() => {
+      permDis.value = district.value;
+      permDis.dispatchEvent(new Event("change"));
+
+      setTimeout(() => {
+        permUpa.value = upazila.value;
+      }, 50);
+    }, 50);
+
+    document.getElementById("perm-post").value =
+      document.getElementById("p-post").value;
+
+    document.getElementById("perm-address").value =
+      document.getElementById("p-address").value;
+  });
+}
+
+
+
+
